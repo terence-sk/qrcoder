@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  be:
+    build: qrcoder-be
+    container_name: qrcoder-be
+    ports:
+      - "8080:8080"
+  db:
+    build: qrcoder-db
+    container_name: qrcoder-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - ./dbdata:/var/lib/postgresql
