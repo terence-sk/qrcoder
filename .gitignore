@@ -13,3 +13,5 @@
 *.jar
 *.log
 /target/
+/.run/
+/qrcoder-local/dbdata/
